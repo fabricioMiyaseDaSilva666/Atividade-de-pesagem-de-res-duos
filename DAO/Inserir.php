@@ -20,10 +20,10 @@
                 return "<br><br>Algo deu errado".$erro;
             }
         }
-        function pesagemMensal(Conexao $conexao, string $codigo, string $codigoFuncionario, string $dtColeta, string $categoria, string $peso){
+        function pesagemMensal(Conexao $conexao, string $codigo, string $codigoFuncionario, string $dtColeta, string $categoria, string $peso, string $envio){
             try{
                 $conn = $conexao->conected();
-                $sql = "Insert into residuos(codigo, codigoFuncionario, dtColeta, categoria, peso) values('$codigo', '$codigoFuncionario', '$dtColeta', '$categoria', '$peso')";
+                $sql = "Insert into mes(codigo, codigoFuncionario, dtColeta, categoria, peso, envio) values('$codigo', '$codigoFuncionario', '$dtColeta', '$categoria', '$peso', '$envio')";
                 mysqli_close($conn);
                 if($result){
                     return "<br><br>Inserido com sucesso!";

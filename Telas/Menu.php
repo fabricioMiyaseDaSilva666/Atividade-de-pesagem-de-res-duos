@@ -11,6 +11,12 @@
         <link rel="stylesheet" href="css/estilo.css">
     </head>
     <body>
-        
+        <a href="Pesagem.php"><button>Registra Pesagem do Mês</button></a><br>
+        <a href="CadastroFuncionario.php"><button>Cadastro do Funcionario</button></a><br>
+        <a href="AtualizarFuncionario.php"><button>Atualizar Funcionario</button></a><br>
+        <a href="ConsultarFuncionario.php"><button>Consultar Funcionario</button></a><br>
+        <a href="ConsultarMes.php"><button>Consultar Mensal</button></a><br>
+        <a href="ExcluirFuncionario.php"><button>Excluir Funcionario</button></a><br>
+        <a href="ExcluirPesagem.php"><button>Excluir Registro de Pesagem</button></a>
     </body>
 </html>
