@@ -3,7 +3,7 @@
     require_once('..\ResiduosPesagem.php');
     require_once('..\DAO\Conexao.php');
     require_once('..\DAO\Inserir.php');
-    require_once('..\Telas\html.html');
+    require_once('..\Telas\telinha.html');
     use PHP\Modleo\ResiduoPesagem;
     use PHP\Modelo\DAO\Conexao;
     use PHP\Modelo\DAO\Inserir;
@@ -17,9 +17,12 @@
         <title>Pesagem de Resíduos</title>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-        <link rel="stylesheet" href="css/estilo.css">
+        <link rel="stylesheet" href="estilo.css">
+        
+            
     </head>
     <body>
+        <h1>Pesagem de Residuos </h1>
         <form method="POST">
         <div class="mb-3">
             <label for="lCodigo" class="form-label">Codigo</label>
@@ -134,7 +137,9 @@
             <label for="lPeso" class="form-label">Peso em kg</label>
             <input type="text" class="form-control" id="tPeso" name="tPeso" placeholder="Insira o peso">
         </div>
-        <button type="submit">Cadastrar
+        <div class="cadastro">
+            <button type="submit">Cadastrar
+        </div>
             <?php
                 $conexao = new Conexao();//Isso vai Conectar ao Banco
 
@@ -170,6 +175,8 @@
             ?>
         </button>
         </form>
-        <br><br><a href="Menu.php"><button>Voltar para o menu</button></a>
+        <br><br>
+        <div class="cadastro">
+            <a href="Menu.php"><button>Voltar para o menu</button></a>
     </body>
 </html>

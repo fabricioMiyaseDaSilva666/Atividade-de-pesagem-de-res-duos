@@ -1,0 +1,34 @@
+body{
+    background-image: url(../imagens/opcao6.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: left center;
+    background-color: aquamarine;
+}
+
+h1{
+    text-align: center;
+    background-color: rgb(189, 184, 184);
+}
+
+.mb-3{
+    margin-left: 200px;
+    margin-right: 300px;
+}
+
+.list-group{
+    margin-left: 200px;
+    margin-right: 300px;
+}
+
+.cadastro{
+    text-align: center;
+}
+
+.menuPrincipal{
+    text-align: center;
+}
+
+.opcao1{
+    float: left;
+}
