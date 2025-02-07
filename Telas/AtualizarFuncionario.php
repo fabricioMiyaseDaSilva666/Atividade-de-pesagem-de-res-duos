@@ -24,7 +24,7 @@
                 <input type="string" name="tCpf"/><br><br>
 
                 <label>Escolha o campo que deseja atualizar: </label>
-                <select name="tCampo">
+                <br><select name="tCampo">
                     <option value="nome">Nome</option>
                     <option value="endereco">Endereço</option>
                     <option value="telefone">Telefone</option>

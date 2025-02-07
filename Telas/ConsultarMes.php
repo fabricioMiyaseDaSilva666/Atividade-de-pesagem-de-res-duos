@@ -24,7 +24,7 @@
             <button type="submit">Consultar
             <?php
                 $conexao = new Conexao();
-                $cpf = $_POST['tCodigo'];
+                $codigo = $_POST['tCodigo'];
                 $consultar = new Consultar();
             ?>
             </button>

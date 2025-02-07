@@ -61,14 +61,11 @@
                         $salario = $_POST['tSalario'];
                         //Instanciar
                         $inserir = new Inserir();
-                        echo $inserir->cadastrarFuncionario($conexao, $cpf, $nome, $endereco, $telefone, $salario);
+                        echo $inserir->cadastrarFuncionario($conexao, $cpf, $nome, $endereco, $telefone, $email, $salario);
                     }
                 ?>
             </button>
             </form>
             <br><br><a href="Menu.php"><button>Voltar para o menu</button></a>
-        <?php
-            //echo $funcionario1->imprimir();
-        ?>
     </body>
 </html>

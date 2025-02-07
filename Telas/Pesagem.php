@@ -44,8 +44,8 @@
 
         <ul class="list-group">
             <li class="list-group-item">
-                <label for="lNaoReci" class="form-check-label">Não Reciclável</label>
-                <input class="form-check-input me-1" type="checkbox" value="" id="tNaoReci" name="tNaoReci">
+                <label for="lNaoReci" class="form-label">Não Reciclável</label>
+                <input class="form-check-input me-1" type="checkbox" id="tNaoReci" name="tNaoReci">
             </li>
 
             <li class="list-group-item">
@@ -132,45 +132,30 @@
                 <label for="lCartelaMed" class="form-check-label">Cartela de Medicamento</label>
                 <input class="form-check-input me-1" type="checkbox" value="" id="tCartelaMed" name="tCartelaMed">
             </li>
-        </ul>
+        </ul><br>
+        
         <div class="mb-3">
             <label for="lPeso" class="form-label">Peso em kg</label>
             <input type="text" class="form-control" id="tPeso" name="tPeso" placeholder="Insira o peso">
         </div>
+
         <div class="cadastro">
             <button type="submit">Cadastrar
         </div>
             <?php
-                $conexao = new Conexao();//Isso vai Conectar ao Banco
+                $conexao = new Conexao();
 
                 if(isset($_POST['tCodigo'])){
                     $codigo = $_POST['tCodigo'];
                     $codigoFuncionario = $_POST['tFuncionarioCole'];
                     $dtColeta = $_POST['tDtColeta'];
                     $envio = $_POST['tEnvio'];
-                    $residuo = $_POST['tNaoReci'];
-                    $residuo = $_POST['tReciclavel'];
-                    $residuo = $_POST['tOleo'];
-                    $residuo = $_POST['tTampasPlas'];
-                    $residuo = $_POST['tLacreAlumi'];
-                    $residuo = $_POST['tTecidos'];
-                    $residuo = $_POST['tMeias'];
-                    $residuo = $_POST['tMaterialEsc'];
-                    $residuo = $_POST['tEsponjas'];
-                    $residuo = $_POST['tEletronicos'];
-                    $residuo = $_POST['tPilhaBate'];
-                    $residuo = $_POST['tInfectante'];
-                    $residuo = $_POST['tQuimico'];
-                    $residuo = $_POST['tLampadaFluore'];
-                    $residuo = $_POST['tTonnersImpre'];
-                    $residuo = $_POST['tEsmalte'];
-                    $residuo = $_POST['tCosmeticos'];
-                    $residuo = $_POST['tCartelaMed'];
+                    $categoria = $_POST['tNaoReci' || 'tReciclavel' || 'tOleo' || 'tTampasPlas' || 'tLacreAlumi' || 'tTecidos' || 'tMeias' || 'tMaterialEsc' || 'tEsponjas' || 'tEletronicos' || 'tPilhaBate' || 'tInfectante' || 'tQuimico' || 'tLampadaFluore' || 'tTonnersImpre' || 'tEsmalte' || 'tCosmeticos' || 'tCartelaMed'];
                     $peso = $_POST['tPeso'];
 
                     //Instanciar
                    $inserir = new Inserir();
-                   echo $inserir->pesagemMensal($conexao, $codigo, $codigoFuncionario, $dtColeta, $envio, $residuo, $peso);
+                   echo $inserir->pesagemMensal($conexao, $codigo, $codigoFuncionario, $dtColeta, $envio, $categoria, $peso);
                 }
             ?>
         </button>

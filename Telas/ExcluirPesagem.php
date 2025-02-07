@@ -33,10 +33,11 @@
                     }
             ?>
         </button>
+        
     </form>
     <br><br>
+    <a href="Menu.php"><button>Voltar para o menu</button></a>
     <div class="cadastro">
-        <a href="Menu.php"><button>Voltar para o menu</button></a>
     <?php
         if(isset($_POST['tCpf'])){
             echo $excluir->excluirMes($conexao, $codigo);

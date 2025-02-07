@@ -9,7 +9,7 @@
             Conexao $conexao,
             int $cpf
         ){
-            $conn = $conexao->conexao();
+            $conn = $conexao->conectar();
             $sql = "delete from funcionario where codigo = '$cpf'";
             $result = mysqli_query($conn, $sql);
             mysqli_close($conn);

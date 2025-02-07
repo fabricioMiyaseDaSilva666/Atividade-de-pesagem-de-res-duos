@@ -38,7 +38,7 @@
         if(isset($_POST['tCpf'])){
             echo $excluir->excluirFuncionario($conexao, $cpf);
         }else{
-            return "Informe um CPF válido";
+            echo "Informe um CPF válido";
         }
     ?>
 </body>
